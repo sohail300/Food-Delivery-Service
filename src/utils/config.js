@@ -1,0 +1,1 @@
+export const baseUrl= 'https://swiggyapiwrapper.dineshrout.repl.co/api/restaurants'
