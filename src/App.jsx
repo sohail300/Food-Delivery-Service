@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home';
 
 function App(){
+    
     return (
         <>
         <Theme accentColor="ruby" grayColor="sand" radius="large" scaling="95%">
