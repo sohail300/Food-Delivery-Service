@@ -1,20 +1,25 @@
-import { Box, Flex, Grid } from "@radix-ui/themes"
 import PlacesCard from "./PlacesCard"
+import { useRecoilValue } from "recoil"
+import { bestCuisinesState } from "../store/atoms"
 
 const BestCuisines = () => {
+  const bestCuisine = useRecoilValue(bestCuisinesState);
+
   return (
-    <Box>
-    <Flex direction={'column'} className='w-screen pl-28 pr-14 pt-8 pb-8 '>
+    <div>
+      <div className='flex flex-col mt-8 mb-8 w-4/5 mx-auto'>
         <h1 className='mb-4 title'>Best Cuisines Near Me</h1>
-        <Grid columns={'4'}>
-        <PlacesCard text={'Chinese'+' Restaurant Near Me'}/>
-        <PlacesCard text={'Chinese'+' Restaurant Near Me'}/>
-        <PlacesCard text={'Chinese'+' Restaurant Near Me'}/>
-        <PlacesCard text={'Chinese'+' Restaurant Near Me'}/>
-        <PlacesCard text={'Chinese'+' Restaurant Near Me'}/>
-        </Grid>
-        </Flex>
-    </Box>
+        <div className='grid grid-cols-4'>
+          {
+            bestCuisine.map((item) => {
+              return (
+                <PlacesCard key={item.text} text={item.text} />
+              )
+            })
+          }
+        </div>
+      </div>
+    </div>
   )
 }
 

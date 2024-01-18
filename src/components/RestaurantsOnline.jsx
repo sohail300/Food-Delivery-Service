@@ -1,22 +1,27 @@
-import { Box, Flex, Grid } from "@radix-ui/themes"
 import TopRestaurantsCard from "./TopRestaurantsCard"
+import { useRecoilValue } from "recoil"
+import { restaurantsOnlineState } from "../store/atoms"
 
 const RestaurantsOnline = () => {
+  const restaurantsOnline = useRecoilValue(restaurantsOnlineState)
+
   return (
-    <Box>
-      <Flex direction={'column'} className='w-screen pl-48 pr-48 pt-8 pb-8'>
-        <Flex direction={'row'} justify={"between"}>
+    <div>
+      <div className='flex flex-col mt-8 mb-8 w-4/5 mx-auto'>
+        <div className="flex flex-row justify-between">
           <h1 className='mb-4 title'>Restaurants with online food delivery</h1>
-        </Flex>
-        <Grid columns={'4'} gap={'6'}>
-          <TopRestaurantsCard />
-          <TopRestaurantsCard />
-          <TopRestaurantsCard />
-          <TopRestaurantsCard />
-          <TopRestaurantsCard />
-        </Grid>
-      </Flex>
-    </Box>
+        </div>
+        <div className='grid grid-cols-4'>
+          {
+            restaurantsOnline.map((item) => {
+              return (
+                <TopRestaurantsCard key={item.info.id} name={item.info.name} imgLink={item.info.cloudinaryImageId} rating={item.info.avgRating} cuisines={item.info.cuisines} locality={item.info.locality} time={item.info.sla.deliveryTime} />
+              )
+            })
+          }
+        </div>
+      </div>
+    </div>
   )
 }
 

@@ -1,25 +1,24 @@
-import { Box, Flex } from '@radix-ui/themes'
 import DishesTypesCards from './DishesTypesCards'
-import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons'
+import { useRecoilValue } from 'recoil'
+import { dishesTypesState } from '../store/atoms'
 
 const DishesTypes = () => {
+    const dishesTypes=useRecoilValue(dishesTypesState)
+    
     return (
-        <Box className='w-screen pl-48 pr-48 pt-8 pb-8'>
-            <Flex direction={'column'}>
-                <Flex direction={'row'} justify={'between'}>
+            <div className='flex flex-col mt-8 mb-8 w-4/5 mx-auto'>
+                <div className='flex flex-row justify-between'>
                     <h2 className='title'>What's on your mind?</h2>
-                    <Flex><ArrowLeftIcon/><span><ArrowRightIcon className='ml-4'/></span></Flex>
-                </Flex>
-                <Flex direction={'row'}>
-                    <DishesTypesCards />
-                    <DishesTypesCards />
-                    <DishesTypesCards />
-                    <DishesTypesCards />
-                    <DishesTypesCards />
-                    <DishesTypesCards />
-                </Flex>
-            </Flex>
-        </Box>
+                    <div className='div'></div>
+                </div>
+                <div className='flex flex-row overflow-x-auto whitespace-nowrap scrollbar-hide'>
+                {dishesTypes.map((item)=> {
+                    return(
+                    <DishesTypesCards key={item.id} imgLink={item.imageId}/>
+                    )
+                })}
+                </div>
+            </div>
     )
 }
 

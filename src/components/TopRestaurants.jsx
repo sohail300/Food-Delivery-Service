@@ -1,25 +1,26 @@
-import { Box, Flex } from "@radix-ui/themes"
-import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons'
-import * as Slider from '@radix-ui/react-slider';
 import TopRestaurantsCard from "./TopRestaurantsCard";
+import { useRecoilValue } from "recoil";
+import { topRestaurantsState } from "../store/atoms";
 
 const TopRestaurants = () => {
-    return (
-        <Box>
-            <Flex direction={'column'} className='w-screen pl-48 pr-48 pt-8 pb-8'>
-                <Flex direction={'row'} justify={"between"}>
-                    <h1 className='mb-4 title'>Top restaurant chains</h1>
-                    <Flex><ArrowLeftIcon /><span><ArrowRightIcon className='ml-4' /></span></Flex>
-                </Flex>
-                <Flex direction={'row'} className="">
-                    <TopRestaurantsCard />
-                    <TopRestaurantsCard />
-                    <TopRestaurantsCard />
-                    <TopRestaurantsCard />
-                </Flex>
+    const topRestaurants = useRecoilValue(topRestaurantsState);
 
-            </Flex>
-        </Box>
+    return (
+            <div className='flex flex-col mt-8 mb-8 w-4/5 mx-auto'>
+                <div className='flex flex-row justify-between'>
+                    <h1 className='mb-4 title'>Top restaurant chains</h1>
+                    <div></div>
+                </div>
+                <div className="flex flex-row overflow-auto whitespace-nowrap scrollbar-hide">
+                    {
+                        topRestaurants.map((item) => {
+                            return (
+                                <TopRestaurantsCard key={item.info.id} id={item.info.id} name={item.info.name} imgLink={item.info.cloudinaryImageId} rating={item.info.avgRating} cuisines={item.info.cuisines} locality={item.info.locality} time={item.info.sla.deliveryTime} />
+                            )
+                        })
+                    }
+                </div>
+            </div>
     )
 }
 

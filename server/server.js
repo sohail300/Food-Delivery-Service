@@ -1,16 +1,18 @@
 const express = require('express');
 const cors = require('cors');
 const fetch = require('cross-fetch');
+const axios = require('axios');
 
 const app = express();
 const port = process.env.PORT  || 3000;
 app.use(cors());
 
-app.get('/api/restaurants', (req, res) => {
+app.get('/api/restaurants', async (req, res) => {
   const { lat, lng } = req.query;
   console.log(req.query);
   const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&page_type=DESKTOP_WEB_LISTING`;
 
+  // const res=await axios.get(url, { headers: {}})
   fetch(url, {
     headers: {
       'Content-Type': 'application/json',

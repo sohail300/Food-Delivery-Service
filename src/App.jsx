@@ -1,18 +1,32 @@
-import '@radix-ui/themes/styles.css';
-import { Theme } from '@radix-ui/themes';
+import { RecoilRoot } from 'recoil';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Home from './pages/Home';
+import Home from './pages/HomePage';
+import Help from './pages/HelpPage';
+import Offer from './pages/OfferPage';
+import Cart from './pages/CartPage';
+import Signin from './pages/SigninPage';
+import Restaurant from './pages/RestaurantPage';
 
-function App(){
-    
+function App() {
+
     return (
         <>
-        <Theme accentColor="ruby" grayColor="sand" radius="large" scaling="95%">
-        <Navbar />
-        <Home />
-        <Footer />
-        </Theme>
+                <RecoilRoot>
+                    <BrowserRouter>
+                        <Navbar />
+                        <Routes>
+                            <Route element={<Home />} path='/' />
+                            <Route element={<Help />} path='/help' />
+                            <Route element={<Offer />} path='/offer' />
+                            <Route element={<Cart />} path='/cart' />
+                            <Route element={<Signin />} path='/signin' />
+                            <Route element={<Restaurant />} path='/restaurant/:resId' />
+                        </Routes>
+                        <Footer />
+                    </BrowserRouter>
+                </RecoilRoot>
         </>
     )
 }

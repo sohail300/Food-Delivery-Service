@@ -1,8 +1,9 @@
 https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=9.919788660259254&lng=78.1504649296403&restaurantId=80920&catalog_qa=undefined&submitAction=ENTER
 
-
 https://swiggyapiwrapper.dineshrout.repl.co/api/restaurants
 
-https://swiggyapiwrapper.dineshrout.repl.co/api/restaurants/326429
+https://swiggyapiwrapper.dineshrout.repl.co/api/restaurants/281469
+326429
+
 
 https://github.com/HarshithaSolai/instafood-server

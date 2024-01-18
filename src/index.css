@@ -17,8 +17,34 @@
   src: url('./assets/fonts/proximanova-medium.otf');
 }
 
+@font-face {
+  font-family: proximaCond;
+  src: url('./assets/fonts/proximanova-cond-regular.otf');
+}
+
+@font-face {
+  font-family: proximaRegular;
+  src: url('./assets/fonts/proximanova-regular.otf');
+}
+
+@font-face {
+  font-family: proximaLight;
+  src: url('./assets/fonts/proximanova-light.otf');
+}
+
+@font-face {
+  font-family: proximaBold;
+  src: url('./assets/fonts/proximanova-bold.otf');
+}
+
 @layer components {
   .title {
     @apply font-extrabold text-2xl text-zinc-950 opacity-95 font-GrotesqueBold;
   }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
