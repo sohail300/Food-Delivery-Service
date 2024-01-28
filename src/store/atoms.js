@@ -42,5 +42,23 @@ export const restaurantOffersState = atom({
 
 export const restaurantDishesState = atom({
     key: 'restaurantDishes',
-    dafault: []
+    default: []
+})
+
+export const cartRestaurantState = atom({
+    key: 'cartRestaurant',
+    default: { id: '10576', name: 'Pizza Hut', address: 'Koramangala', imageId: '2b4f62d606d1b2bfba9ba9e5386fabb7', deliveryCharge: 4000 }
+})
+
+export const cartDishesState = atom({
+    key: 'cartDishes',
+    default: [
+        { id: '111819613', name: 'Margherita', quantity: 1, price: 16900 },
+        { id: '47542941', name: 'Veggie Feast', quantity: 1, price: 25900 }
+    ]
+})
+
+export const chargesState = atom({
+    key: 'charges',
+    default: null
 })

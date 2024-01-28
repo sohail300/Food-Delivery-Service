@@ -17,6 +17,7 @@ const RestaurantInfo = () => {
       <div className='title text-xl'>{restaurantInfo?.name}</div>
       <div className='text-zinc-950 opacity-75 font-Grotesque text-sm'>{restaurantInfo?.cuisines?.join(', ')}</div>
       <div className='text-zinc-950 opacity-75 font-Grotesque'>{restaurantInfo?.locality}, {restaurantInfo?.sla?.slaString}</div>
+      <div className='text-zinc-950 opacity-75 font-Grotesque'>{restaurantInfo?.feeDetails?.message}</div>
       </div>
       <div className='flex-col justify-between items-center border-solid border-zinc-200 border-2 rounded'>
         <div className='font-bold text-green-600 flex justify-center items-center py-2'><StarIcon fontSize='small'/><span>{restaurantInfo?.avgRating}</span></div>

@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const Legal = () => {
     return (
         <>
-            <h1 className='title'>Legal</h1>
+            <h1 className='title'>Legal, Terms & Conditions</h1>
             <div>
                 <Accordion className='py-2'>
                     <AccordionSummary

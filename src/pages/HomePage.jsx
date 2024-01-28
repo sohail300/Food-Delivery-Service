@@ -25,7 +25,6 @@ function Home() {
     const api = axios.create({
         baseUrl
     })
-    console.log('inside home page')
 
     async function getData() {
         const res = await axios.get(`https://food-delivery-service-7vpo.onrender.com/api/restaurants?lat=${lat}&lng=${lng}`);

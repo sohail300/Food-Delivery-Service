@@ -6,8 +6,8 @@ import Home from './pages/HomePage';
 import Help from './pages/HelpPage';
 import Offer from './pages/OfferPage';
 import Cart from './pages/CartPage';
-import Signin from './pages/SigninPage';
 import Restaurant from './pages/RestaurantPage';
+import Profile from './pages/ProfilePage';
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
                             <Route element={<Help />} path='/help' />
                             <Route element={<Offer />} path='/offer' />
                             <Route element={<Cart />} path='/cart' />
-                            <Route element={<Signin />} path='/signin' />
+                            <Route element={<Profile />} path='/profile' />
                             <Route element={<Restaurant />} path='/restaurant/:resId' />
                         </Routes>
                         <Footer />

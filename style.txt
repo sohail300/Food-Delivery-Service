@@ -1,0 +1,56 @@
+✅ navbar 
+size: 16px text-base
+color:#3d4152 
+ProximaNova
+weight: 500 font-medium
+
+✅ title
+size: 24px text-2xl
+rgba(2, 6, 12, 0.92) 
+Basis_Grotesque_Pro 
+weight: 800 font-extrabold
+
+✅ card title 
+size: 18 text-lg
+rgba(2, 6, 12, 0.75) 
+Basis_Grotesque_Pro_Bold 
+weight: 700 font-bold
+
+✅ card subtitle 
+size: 16 text-base
+rgba(2, 6, 12, 0.75) 
+Basis_Grotesque_Pro_Bold 
+weight: 700 font-bold
+
+✅ card font 
+size: 16 text-base
+rgba(2, 6, 12, 0.6) 
+Basis_Grotesque_Pro 
+weight: 200 font-extralight
+
+✅ best cuisines font 
+size: 16 text-base
+rgba(2, 6, 12, 0.75) 
+Basis_Grotesque_Pro 
+weight: 400 font-normal
+
+Swiggy App
+bg: #f0f1f4
+size: 28 text-3xl
+rgba(2, 6, 12, 0.75) 
+Basis_Grotesque_Pro 
+weight: 800 font-extrabold
+
+✅ Footer
+bg: #02070d
+Heading
+size: 18 text-lg
+rgba(255, 255, 255, 0.92) 
+Basis_Grotesque_Pro_Bold
+weight: 700 font-bold
+
+Text:
+size: 16 text-base
+rgba(255, 255, 255, 0.6) 
+Basis_Grotesque_Pro
+weight: 200 font-extralight

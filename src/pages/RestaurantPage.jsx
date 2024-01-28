@@ -6,7 +6,6 @@ import { useSetRecoilState } from 'recoil';
 import RestaurantInfo from '../components/RestaurantInfo';
 import RestaurantOffers from '../components/RestaurantOffers';
 import RestaurantDishes from '../components/RestaurantDishes.js';
-import Button from '@mui/material/Button';
 
 const RestaurantPage = () => {
     const setRestaurantOffers = useSetRecoilState(restaurantOffersState);
