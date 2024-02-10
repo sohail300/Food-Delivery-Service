@@ -23,7 +23,7 @@ const FAQs = () => {
                         <div className='text-sm text-zinc-950 opacity-60 font-proximaLight mt-4'>
                             Note: We value your privacy and your information is safe with us. Please do not reveal any personal information, bank account number, OTP etc. to another person. A Swiggy representative will never ask you for these details. Please do not reveal these details to fraudsters and imposters claiming to be calling on our behalf. Be vigilant and do not entertain phishing calls or emails.
                         </div>
-                        <span className='border-solid border-2 border-orange-400 text-orange-400 font-proxima p-2 mt-16'>
+                        <span className='border-solid border-2 border-orange-400 text-orange-400 font-proxima p-2 mt-16 cursor-pointer'>
                             SEND AN EMAIL
                         </span>
                         <div className='text-xs text-zinc-950 opacity-60 font-proximaLight my-2'>
@@ -44,7 +44,7 @@ const FAQs = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                     <div className='text-sm text-orange-400 font-proximaBold mb-4'>Join our team</div>
-                        <span className='border-solid border-2 border-orange-400 text-orange-400 font-proxima p-2'>
+                        <span className='border-solid border-2 border-orange-400 text-orange-400 font-proxima p-2 cursor-pointer'>
                             SEND AN EMAIL
                         </span>
                         <div className='text-xs text-zinc-950 opacity-60 font-proximaLight my-2'>
@@ -64,7 +64,7 @@ const FAQs = () => {
                         I want to provide feedback
                     </AccordionSummary>
                     <AccordionDetails>
-                    <span className='border-solid border-2 border-orange-400 text-orange-400 font-proxima p-2'>
+                    <span className='border-solid border-2 border-orange-400 text-orange-400 font-proxima p-2 cursor-pointer'>
                             SEND AN EMAIL
                         </span>
                         <div className='text-xs text-zinc-950 opacity-60 font-proximaLight my-2'>

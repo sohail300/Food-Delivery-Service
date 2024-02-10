@@ -11,7 +11,7 @@ const Footer = () => {
             <div className='flex flex-row justify-between items-start w-screen pl-48 pr-48 pt-8 pb-8'>
                 <div className='flex flex-col justify-centre items-center'>
                     <img src={logo} alt="logo" className='w-40 cursor-pointer' onClick={() => { navigate('/') }} />
-                    <p className='text-base font-extralight opacity-90 font-Grotesque'>Food Delivery Service Limited © {fullYear}</p>
+                    <p className='text-base font-extralight opacity-90 font-Grotesque'>Rapid Food Service Limited © {fullYear}</p>
                 </div>
                 <div className='flex flex-col'>
                     <h3 className='font-bold text-lg mb-4 opacity-90 font-GrotesqueBold'>Company</h3>

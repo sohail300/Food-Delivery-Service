@@ -13,7 +13,7 @@ const RestaurantOffers = () => {
                 {
                     offers[0].map((item, index) => {
                         return (
-                            <div key={index} className='border-solid border-zinc-200 border-2 rounded mr-4 py-4 pl-4 pr-12 w-52'>
+                            <div key={index} className='border-solid border-zinc-200 border-2 rounded mr-4 py-4 pl-4 pr-12 w-52 cursor-pointer'>
                                 <div className='flex flex-col font-extrabold text-zinc-950 opacity-60 text-sm font-proxima '>{item?.info?.header}</div>
                                 <div className='flex flex-col font-bold text-zinc-950 opacity-50 text-xs font-proximaCond'>{item?.info?.couponCode} | {item?.info?.description}</div>
                             </div>

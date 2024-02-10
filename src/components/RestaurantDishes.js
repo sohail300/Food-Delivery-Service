@@ -53,7 +53,7 @@ const RestaurantDishes = () => {
   return (
     dishes[0].map((arrItem, index) => {
       return (
-        arrItem.card.card["@type"].includes('ItemCategory') &&
+        arrItem.card.card["@type"].includes('ItemCategory') && arrItem.card.card.itemCards!=null && 
         <div className='mx-80' key={index}>
           <Accordion className='my-4'>
             <AccordionSummary

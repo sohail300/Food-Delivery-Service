@@ -10,11 +10,32 @@ const Navbar = () => {
   const navigate = useNavigate();
   const online = useOnlineStatus();
 
+  const popupStyle = {
+    display: online ? 'none' : 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'fixed',
+    top: '30%',
+    left: '30%',
+    width: '40%',
+    height: '25%',
+    backgroundColor: 'rgb(250,152,1,0.9)' ,
+    borderRadius: '8px',
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    padding: '40px 20px',
+    fontSize: '32px',
+    zIndex: 1000,
+  };
+
   return (
+    <>
     <div className='flex flex-row justify-between items-center pr-32 pl-32 w-screen shadow-lg navbar'>
       <div className='flex flex-row items-center'>
         <img src={logo} alt="logo" className='w-24 cursor-pointer' onClick={() => { navigate('/') }} />
-        <h1 className='text-xl ml-8 cursor-pointer' onClick={() => { navigate('/') }}>Food Delivery</h1>
+        <h1 className='text-xl ml-8 cursor-pointer font-proximaRegular' onClick={() => { navigate('/') }}>Rapid Food</h1>
       </div>
       <ul className='flex justify-between w-2/5 font-medium text-base text-navbar font-proxima'>
         <li className='flex flex-row items-center'>
@@ -34,6 +55,11 @@ const Navbar = () => {
         </li>
       </ul>
     </div>
+    <div style={popupStyle}>
+      <p className='flex justify-self-center items-center'>You are offline.</p>
+      <p className='flex justify-self-center items-center'>Please come online!</p>
+    </div>
+    </>
   );
 }
 

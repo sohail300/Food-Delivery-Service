@@ -20,7 +20,7 @@ const Partner = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                     <div className='text-sm text-orange-400 font-proximaBold my-4'>Partner with us</div>
-                        <span className='border-solid border-2 border-orange-400 text-orange-400 font-proxima p-2'>
+                        <span className='border-solid border-2 border-orange-400 text-orange-400 font-proxima p-2 cursor-pointer'>
                             SEND AN EMAIL
                         </span>
                         <div className='text-xs text-zinc-950 opacity-60 font-proximaLight my-2'>
